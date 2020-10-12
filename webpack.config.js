@@ -1,4 +1,12 @@
-var path = require("path");
+const fs = require("fs");
+const path = require("path");
+const jsyaml = require("js-yaml");
+
+const preprocessor = (() => {
+    console.log("liquid preprocessor...");
+    const data = fs.readFileSync("./src/translation.yaml", "utf8");
+    return jsyaml.load(data);
+})();
 
 module.exports = {
     mode: "development",
@@ -18,10 +26,7 @@ module.exports = {
                     {
                         loader: "liquid-loader",
                         options: {
-                            data: {
-                                name: "Antonio",
-                                dev_evn: true,
-                            },
+                            data: preprocessor,
                         },
                     },
                 ],

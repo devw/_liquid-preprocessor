@@ -8,6 +8,7 @@
         "build": "webpack --config webpack.config.js"
     },
     "devDependencies": {
+        "js-yaml": "^3.14.0",
         "liquid-loader": "^0.1.4",
         "webpack-cli": "^4.0.0"
     },
