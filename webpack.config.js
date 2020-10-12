@@ -20,6 +20,7 @@ module.exports = {
                         options: {
                             data: {
                                 name: "Antonio",
+                                dev_evn: true,
                             },
                         },
                     },
