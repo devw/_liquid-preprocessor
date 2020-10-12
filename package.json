@@ -1,16 +1,19 @@
 {
-  "name": "liquid-loader",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "build": "webpack --config webpack.config.js"
-  },
-  "devDependencies": {
-    "liquid-loader": "^0.1.4",
-    "webpack-cli": "^4.0.0"
-  },
-  "dependencies": {
-    "webpack": "^5.0.0"
-  }
+    "name": "liquid-loader",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "clean": "rm -rf dist",
+        "prebuild": "rm -rf docs",
+        "build": "webpack --config webpack.config.js; mv dist docs; git checkout docs/index.html"
+    },
+    "devDependencies": {
+        "js-yaml": "^3.14.0",
+        "liquid-loader": "^0.1.4",
+        "webpack-cli": "^4.0.0"
+    },
+    "dependencies": {
+        "webpack": "^5.0.0"
+    }
 }
