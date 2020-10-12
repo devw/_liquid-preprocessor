@@ -2,5 +2,15 @@
   "name": "liquid-loader",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "liquid-loader": "^0.1.4",
+    "webpack-cli": "^4.0.0"
+  },
+  "dependencies": {
+    "webpack": "^5.0.0"
+  }
 }
